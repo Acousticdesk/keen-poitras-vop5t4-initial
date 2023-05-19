@@ -1,27 +1,20 @@
-# Sandbox
+# Angular TODO Items by Star
+## Requirements
+- Use jsonplaceholder API to fetch todo items
+- Render checkbox with completed status near each of the todo item
+- Use a separate Angular service to fetch data from API
+-  Replace the initial markup with the app markup
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+## API usage example
+```
+fetch('https://jsonplaceholder.typicode.com/todos')
+.then(response => response.json())
+.then(json => console.log(json))
+```
 
-## Development server
+## Hints
+- You can use Angular schematics in Stackblitz. Right click on a folder, choose Angular Generator.
 
-Run `ng serve` for a dev server. Navigate to http://localhost:4200. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Stackblitz Troubleshooting
+- If the component's template is not rendered or updated, try removing the component tag i.e. <component></component> from the application template and then add it again
+Neither Stackblitz nor Codesandbox do not allow to use Typescript Intellisense in *.hmtl files. If a TS error occurs only during application build, read the error patiently to understand if it's related to *.html templates.
